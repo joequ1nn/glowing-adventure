@@ -1,4 +1,4 @@
-Example code accompanying the blog post "Combining JSON and XML in RESTful web services with Spring" at http://software.sawano.se/2012/03/combining-json-and-xml-in-restful-web.html
+Code based on example in blog post "Combining JSON and XML in RESTful web services with Spring" at http://software.sawano.se/2012/03/combining-json-and-xml-in-restful-web.html
 
 To run the integration tests included in this example with Maven use:
 

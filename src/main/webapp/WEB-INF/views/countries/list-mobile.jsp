@@ -6,9 +6,10 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 	<title>FCO Travel Advice</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="resources/js/jquery.mobile-1.1.0.css" />
+	
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="resources/js/jquery.mobile-1.1.0.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyD0kL08UvEOGpfGqfA-LfjKmB8Fxe_v8HM"></script>
 	<script type="text/javascript" src="resources/js/jquery.ui.map.min.js"></script>
 	<script type="text/javascript">
@@ -26,11 +27,10 @@
 			});
 			 			
            $(".mapRefresh").click(function() {
-           	
-           	 $('.map_canvas').gmap('refresh');
-           	 
+           		$(this).find('.map_canvas').gmap('refresh');           	 
            });
 		});
+		 
 // 		$('div[data-role="page"]').live( 'pageinit',function(event){ 
 // 			alert( 'data-role!' );
 // 		});
@@ -44,7 +44,7 @@
 	        </h3>
 	    </div>
 		<div data-role="content">
-			<ul data-role="listview" data-theme="c"  data-ajax="false">
+			<ul id="largeListView" data-role="listview" data-theme="c"  data-ajax="false" data-filter="true" data-filter-placeholder="Search Countries...">
 			<c:forEach items="${countries}" var="country">
 			<li><a href="countries/${country.slug}.htm">
 				<h3>${country.name}</h3>

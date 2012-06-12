@@ -13,6 +13,10 @@
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyD0kL08UvEOGpfGqfA-LfjKmB8Fxe_v8HM"></script>
 	<script type="text/javascript" src="resources/js/jquery.ui.map.min.js"></script>
 	<script type="text/javascript">
+		$(document).bind("mobileinit", function(){
+        	$.mobile.defaultPageTransition = 'none';
+		});
+
 		$( '#show' ).live( 'pageshow',function(event){ 
 			 $( ".map_canvas" ).each(function(i){
 				 var coords = $(this).attr('data-lat') + ", " + $(this).attr('data-lng'); 
